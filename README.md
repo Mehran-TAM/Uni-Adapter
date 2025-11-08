@@ -4,7 +4,7 @@ This repository is the official implementation of the AAAI 2026 paper ["Adapt-As
 ## Overview
 ![](assets/architecture.png)
 
-3D Vision-Language Foundation Models (VLFMs) have shown strong generalization and zero-shot recognition capabilities in open-world point cloud processing tasks. However, these models often underperform in practical scenarios where data are noisy, incomplete, or drawn from a different distribution than the training data. To address this, we propose **Uni-Adapter**, a novel training-free online test-time adaptation (TTA) strategy for 3D VLFMs based on dynamic prototype learning. We define a 3D cache to store class-specific cluster centers as prototypes, which are continuously updated to capture intra-class variability in heterogeneous data distributions. These dynamic prototypes serve as anchors for cache-based logit computation via similarity scoring. Simultaneously, a graph-based label smoothing module captures inter-prototype similarities to enforce label consistency among similar prototypes. Finally, we unify predictions from the original 3D VLFM and the refined 3D cache using entropy-weighted aggregation for reliable adaptation. Without retraining, Uni-Adapter effectively mitigates distribution shifts, achieving state-of-the-art performance on diverse 3D benchmarks over different 3D VLFMs—improving ModelNet-40C by \textbf{10.55%}, ScanObjectNN-C by \textbf{8.26%}, and ShapeNet-C by \textbf{4.49%} over the source 3D VLFMs.
+3D Vision-Language Foundation Models (VLFMs) have shown strong generalization and zero-shot recognition capabilities in open-world point cloud processing tasks. However, these models often underperform in practical scenarios where data are noisy, incomplete, or drawn from a different distribution than the training data. To address this, we propose **Uni-Adapter**, a novel training-free online test-time adaptation (TTA) strategy for 3D VLFMs based on dynamic prototype learning. We define a 3D cache to store class-specific cluster centers as prototypes, which are continuously updated to capture intra-class variability in heterogeneous data distributions. These dynamic prototypes serve as anchors for cache-based logit computation via similarity scoring. Simultaneously, a graph-based label smoothing module captures inter-prototype similarities to enforce label consistency among similar prototypes. Finally, we unify predictions from the original 3D VLFM and the refined 3D cache using entropy-weighted aggregation for reliable adaptation. Without retraining, Uni-Adapter effectively mitigates distribution shifts, achieving state-of-the-art performance on diverse 3D benchmarks over different 3D VLFMs—improving ModelNet-40C by 10.55%, ScanObjectNN-C by 8.26%, and ShapeNet-C by 4.49% over the source 3D VLFMs.
 
 ## Motivation
 ![](assets/motivation.png)
@@ -13,7 +13,6 @@ This repository is the official implementation of the AAAI 2026 paper ["Adapt-As
 
 ## Environment
 ### Package Setup
-* [dassl](https://github.com/auniquesun/dassl)
 * Ubuntu 23.10
 * Python 3.8.16
 * PyTorch 1.12.0
@@ -30,7 +29,7 @@ This repository is the official implementation of the AAAI 2026 paper ["Adapt-As
   # install torch
   pip install torch==1.12.0+cu116 torchvision==0.13.0+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
   # install dassl
-  git clone https://github.com/auniquesun/dassl
+  git clone https://github.com/
   cd dassl/
   python setup.py develop # (no need to re-build if the source code is modified)
 
@@ -53,7 +52,7 @@ This repository is the official implementation of the AAAI 2026 paper ["Adapt-As
     * [Uni3D](https://github.com/baaivision/Uni3D)
 
     - **NOTE:** 
-        1. ULIP-2 uses the same [text encoder](https://huggingface.co/datasets/auniquesun/Point-PRC/tree/main/pretrained-weights/ulip/image-text-encoder) as ULIP
+        1. ULIP-2 uses the same [text encoder](https://huggingface.co/datasets/auniquesun/Point-PRC/tree/main/pretrained-weights/ulip/image-text-encoder) 
         2. For OpenShape, we use the [pointbert-vitg14-rgb](https://huggingface.co/OpenShape/openshape-pointbert-vitg14-rgb/tree/main) version
             - For text encoder in OpenShape, we use [CLIP-ViT-bigG-14-laion2B-39B-b160k](https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k) from **huggingface laion**
         3. For Uni3D, we use the [uni3d-g](https://huggingface.co/BAAI/Uni3D/tree/main/modelzoo/uni3d-g) version
