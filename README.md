@@ -1,6 +1,12 @@
 # Uni-Adapter
 This repository is the official implementation of the AAAI 2026 paper ["Adapt-As-You-Walk Through the Clouds: Training-Free Online Test-Time Adaptation of 3D Vision-Language Foundation Models"](http://arxiv.org/link).
 
+🚧 **Code Release Notice**
+
+The code and pretrained checkpoints are currently being prepared for public release.  
+Please stay tuned — the full implementation will be made available **soon**.
+
+
 ## Overview
 ![](assets/architecture.png)
 
