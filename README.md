@@ -45,7 +45,7 @@ Please stay tuned — the full implementation will be made available **soon**.
 
 
 ### Pre-trained Weights
-1. In the experiments, we use the following models as the baselines. The pre-trained weights of these models can be found in their public GitHub repositories. 
+1. We use the following models as baselines, and their pre-trained weights can be obtained from their public GitHub repositories.
     * [ULIP-2](https://huggingface.co/datasets/auniquesun/Point-PRC/tree/main/pretrained-weights/ulip-2)
     * [OpenShape](https://github.com/Colin97/OpenShape_code/)
     * [Uni3D](https://github.com/baaivision/Uni3D)
@@ -57,19 +57,19 @@ Please stay tuned — the full implementation will be made available **soon**.
         3. For Uni3D, we use the [uni3d-L](https://huggingface.co/BAAI/Uni3D/tree/main/modelzoo/uni3d-L) version
             - For text encoder in Uni3D, we use [eva02_enormous_patch14_plus_clip_224.laion2b_s9b_b144k](https://huggingface.co/timm/eva02_enormous_patch14_plus_clip_224.laion2b_s9b_b144k) from **huggingface timm**
 
-2. Make a folder called `weights` under this project and save the pre-trained weights into this folder. 
 
 ### Datasets
 1. The folder structure of used datasets should be organized as follows.
 ```sh
     
-    |----data # placed in the same level as `runners`, `scripts`, etc. 
-        |----modelnet_c
-        |----modelnet40
-        |----scanobjnn
-        |----omniobject3d
-            |----1024
-        |----objaverse_lvis
+  |----data   
+      |----modelnet_c
+      |----shapenet_c
+      |----scanobjnn_c
+      |----omniobject3d
+          |----1024
+      |----objaverse_lvis
+
 
     ...
 ```
