@@ -80,6 +80,7 @@ conda env create -f env.yaml
 
 ### Evaluation on _ModelNet-C_
 
+For ModelNet40-C, we used the corrupted data from [Modelnet40-C](https://github.com/jiachens/ModelNet40-C) repository, using the maximum corruption severity level (5) for all experiments
 
 
 
