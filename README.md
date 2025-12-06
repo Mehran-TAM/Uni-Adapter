@@ -67,7 +67,7 @@ conda env create -f env.yaml
 ```sh
     
   |----data   
-      |----modelnet_c
+      |----modelnet40_c
       |----shapenet_c
       |----scanobjnn_c
       |----omniobject3d
