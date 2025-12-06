@@ -24,8 +24,6 @@ Existing test-time adaptation methods either depend on computationally expensive
 * PyTorch 1.12.0
 * CUDA 11.6
 * torchvision 0.13.0
-* timm 0.9.16
-* pueue & pueued 2.0.4
 
 ```sh
 # NOTE: Option 1 is recommended. A complete package list is available in `env.yaml`.
