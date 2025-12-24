@@ -44,7 +44,7 @@ def parse_args():
     # OpenShape Specifics
     parser.add_argument("--oshape-version", type=str, choices=["vitg14", "vitl14"], default="vitg14")
     parser.add_argument('--pc-model-oshape', type=str, default="eva02_large_patch14_448", help="Point cloud backbone") # for OpenShape
-    parser.add_argument('--pretrained-pc-oshape', type=str, default=r"C:\Users\reza_moradi\Desktop\point\AAAI\code\pretrained\uni3d_g_ensembled_model.pt", help="Path to Uni3D checkpoint")
+    parser.add_argument('--pretrained-pc-oshape', type=str, default=r"your_path\pretrained\uni3d_g_ensembled_model.pt", help="Path to Uni3D checkpoint")
     
     parser.add_argument('--pc-feat-dim-oshape', type=int, default=1024, help="Point cloud feature dimension") # for OpenShape
     parser.add_argument('--embed-dim-oshape', type=int, default=1024, help="Embedding dimension") # for OpenShape
@@ -95,3 +95,4 @@ def parse_args():
     args = parser.parse_args()
 
     return args
+
