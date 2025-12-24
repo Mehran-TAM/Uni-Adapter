@@ -26,12 +26,12 @@ def parse_args():
     parser.add_argument('--drop-path-rate', default=0.0, type=float)
 
     # Uni3D Specifics
-    parser.add_argument('--precomputed-text-features', type=str, default=r"C:\Users\reza_moradi\Desktop\point\AAAI\code\precomputed_text_features\Uni3D\text_features_large.pt", help="Path to Uni3D checkpoint")
+    parser.add_argument('--precomputed-text-features', type=str, default=r"your_path\precomputed_text_features\Uni3D\text_features_large.pt", help="Path to Uni3D checkpoint")
 
     parser.add_argument('--clip-uni3d-model', type=str, default="EVA02-E-14-plus", help="CLIP backbone name")
-    parser.add_argument('--clip-uvi3d-path', type=str, default=r"C:\Users\reza_moradi\Desktop\point\AAAI\code\pretrained\open_clip_pytorch_model.bin", help="CLIP backbone name")
+    parser.add_argument('--clip-uvi3d-path', type=str, default=r"your_path\pretrained\open_clip_pytorch_model.bin", help="CLIP backbone name")
     parser.add_argument('--pc-model-uni3d', type=str, default="eva02_large_patch14_448", help="Point cloud backbone") # for Uni3D
-    parser.add_argument('--pretrained-pc-uni3d', type=str, default=r"C:\Users\reza_moradi\Desktop\point\AAAI\code\pretrained\uni3d_L_ensembled_model.pt", help="Path to Uni3D checkpoint")
+    parser.add_argument('--pretrained-pc-uni3d', type=str, default=r"your_path\pretrained\uni3d_L_ensembled_model.pt", help="Path to Uni3D checkpoint")
     
     
     parser.add_argument('--pc-feat-dim-uni3d', type=int, default=1024, help="Point cloud feature dimension") # for Uni3D
@@ -93,4 +93,5 @@ def parse_args():
     parser.add_argument('--distributed', action='store_true')
 
     args = parser.parse_args()
+
     return args
