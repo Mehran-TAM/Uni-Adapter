@@ -58,7 +58,7 @@ def parse_args():
     parser.add_argument('--slip-ckpt-path', type=str, default=None, help="Path to SLIP weights")
     parser.add_argument('--ulip-version', type=str, default="ulip2", help="ulip version")
     parser.add_argument('--pc-model-ulip', type=str, default="eva02_large_patch14_448", help="Point cloud backbone") # for ULIP
-    parser.add_argument('--pretrained-pc-ulip', type=str, default=r"C:\Users\reza_moradi\Desktop\point\AAAI\code\pretrained\uni3d_g_ensembled_model.pt", help="Path to Uni3D checkpoint")
+    parser.add_argument('--pretrained-pc-ulip', type=str, default=r"your_path\pretrained\uni3d_g_ensembled_model.pt", help="Path to Uni3D checkpoint")
     
     parser.add_argument('--pc-feat-dim-ulip', type=int, default=1024, help="Point cloud feature dimension") # for ULIP
     parser.add_argument('--embed-dim-ulip', type=int, default=1024, help="Embedding dimension") # for ULIP
@@ -72,7 +72,7 @@ def parse_args():
 
     # ========================= Data Config =========================
     # Dataset Root
-    parser.add_argument('--myroot', type=str, default="C:\\Users\\reza_moradi\\Desktop\\point\\AAAI\\code\\datasets\\modelnet40_c", help='Root path to specific dataset point clouds')
+    parser.add_argument('--myroot', type=str, default="your_path\\datasets\\modelnet40_c", help='Root path to specific dataset point clouds')
     
     parser.add_argument('--dataset_name', type=str, default='modelnet', help='modelnet, scanobject, shapenetcore')
     parser.add_argument('--validate_dataset_name', default='modelnet40_openshape', type=str, help="Key in labels.json")
@@ -95,4 +95,5 @@ def parse_args():
     args = parser.parse_args()
 
     return args
+
 
